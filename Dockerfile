@@ -23,9 +23,6 @@ RUN chown -R www-data:www-data /var/www/html
 # Copia archivo .htaccess si no existe
 COPY ./public/.htaccess /var/www/html/public/.htaccess
 
-# Instalar dependencias de PHP con Composer
-RUN composer install --no-dev --optimize-autoloader
-
 # Puerto para Render
 EXPOSE 8080
 
